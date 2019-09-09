@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     const { gallery } = this.state;
     return (
-      <div>
+      <div style={{ backgroundColor: "#AEEEEE" }}>
         {!gallery && <Welcome handleSubmit={this.handleSubmit} />}
         {gallery && <Gallery gallery={gallery} />}
       </div>
