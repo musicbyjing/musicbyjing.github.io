@@ -7,13 +7,12 @@ import Button from "react-bootstrap/Button";
 export default class Welcome extends React.Component {
   render() {
     return (
-      // <div class="container padding block">
       <Container>
         <Button variant="link" className="link float-right">
-          about
+          why teal?
         </Button>
         <Button variant="link" className="link float-right">
-          why teal?
+          about
         </Button>
         <div
           style={{
