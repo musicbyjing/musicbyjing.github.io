@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 export default class Welcome extends React.Component {
   render() {
     return (
-      <Container>
+      <Container className="paddedContainer">
         <Button variant="link" className="link float-right">
           why teal?
         </Button>

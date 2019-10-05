@@ -1,5 +1,6 @@
 import React from "react";
 import Gallery from "react-photo-gallery";
+import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import photos from "./photos.js";
 import MyButton from "./MyButton";
 
@@ -10,15 +11,20 @@ export default class MyGallery extends React.Component {
   }
 
   render() {
-    // let bob = this.props.gallery;
-
     const Column = () => <Gallery photos={photos} direction={"column"} />;
 
     return (
-      <>
+      <div className="paddedContainer">
         <Column />
-        <MyButton value="back" handleSubmit={this.props.handleSubmit} />
-      </>
+        <ButtonToolbar className="justify-content-center">
+          <MyButton value="back" handleSubmit={this.props.handleSubmit} />
+          <MyButton value="dusk" handleSubmit={this.props.handleSubmit} />
+          <MyButton value="clear" handleSubmit={this.props.handleSubmit} />
+          <MyButton value="vibrant" handleSubmit={this.props.handleSubmit} />
+          <MyButton value="sundown" handleSubmit={this.props.handleSubmit} />
+          <MyButton value="us" handleSubmit={this.props.handleSubmit} />
+        </ButtonToolbar>
+      </div>
     );
   }
 }
