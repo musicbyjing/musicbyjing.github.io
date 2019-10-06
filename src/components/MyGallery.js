@@ -5,18 +5,13 @@ import photos from "./photos.js";
 import MyButton from "./MyButton";
 
 export default class MyGallery extends React.Component {
-  importAll(list) {
-    // for (e of list) {
-    // }
-  }
-
   render() {
     const Column = () => <Gallery photos={photos} direction={"column"} />;
 
     return (
-      <div className="paddedContainer">
+      <div className="paddedContainer" style={{ backgroundColor: "white" }}>
         <Column />
-        <ButtonToolbar className="justify-content-center">
+        <ButtonToolbar className="justify-content-center gallery">
           <MyButton value="back" handleSubmit={this.props.handleSubmit} />
           <MyButton value="dusk" handleSubmit={this.props.handleSubmit} />
           <MyButton value="clear" handleSubmit={this.props.handleSubmit} />

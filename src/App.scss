@@ -6,11 +6,6 @@
   scroll-behavior: smooth;
 }
 
-.link {
-  font-family: "Space Mono", monospace;
-  color: white;
-}
-
 .link:hover {
   color: #ff3300;
 }
@@ -18,6 +13,11 @@
 /*---WELCOME---*/
 .paddedContainer {
   padding: 4vh;
+}
+
+.welcome .link {
+  font-family: "Space Mono", monospace;
+  color: white;
 }
 
 /*---INTRO PARAGRAPH---*/
@@ -28,4 +28,10 @@ block {
 h1,
 p {
   font-family: "Quicksand", sans-serif;
+}
+
+/*---GALLERY---*/
+.gallery .link {
+  font-family: "Space Mono", monospace;
+  color: black;
 }
