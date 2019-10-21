@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import Welcome from "./components/Welcome";
+import About from "./components/About";
 import MyGallery from "./components/MyGallery";
 
 const colors = [
@@ -37,8 +38,9 @@ export default class App extends Component {
     const { gallery } = this.state;
     return (
       <div style={{ backgroundColor: bgColor, color: textColor(bgColor) }}>
-        {gallery === "back" && <Welcome handleSubmit={this.handleSubmit} />}
-        {gallery !== "back" && (
+        {gallery !== "about" && <Welcome handleSubmit={this.handleSubmit} />}
+        {gallery === "about" && <About handleSubmit={this.handleSubmit} />}
+        {gallery !== "back" && gallery !== "about" && (
           <MyGallery
             gallery={this.state.gallery}
             handleSubmit={this.handleSubmit}

@@ -10,9 +10,11 @@ export default class Welcome extends React.Component {
     return (
       <Container className="paddedContainer welcome">
         <Image src={require("../thumb.jpg")} className="float-left" />
-        <Button variant="link" className="link float-right">
-          about
-        </Button>
+        <div style={{ float: "right" }}>
+          <MyButton value="about" handleSubmit={this.props.handleSubmit}>
+            about
+          </MyButton>
+        </div>
         <div
           style={{
             height: "30vh"
